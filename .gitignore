@@ -1,0 +1,55 @@
+# ==========================
+# GLPI Runtime e Config
+# ==========================
+/files/
+/config/config_db.php
+/config/local_define.php
+/config/locales.php
+# manter somente arquivos de exemplo/modelo
+/config/*.sample
+/config/*.dist.php
+
+# ==========================
+# Logs e temporários
+# ==========================
+/log/
+/tmp/
+/cache/
+/sessions/
+/var/
+
+# ==========================
+# Dependências PHP/JS
+# ==========================
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+npm-debug.log*
+
+# ==========================
+# Arquivos grandes/binários
+# ==========================
+*.exe
+*.msi
+*.tgz
+*.zip
+*.7z
+*.iso
+*.bak
+*.tmp
+*.old
+*.sql
+
+# ==========================
+# Arquivos de sistema
+# ==========================
+.DS_Store
+Thumbs.db
+*.log
+
+# ==========================
+# Variáveis de ambiente
+# ==========================
+.env
+.env.*
