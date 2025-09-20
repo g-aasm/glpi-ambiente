@@ -2712,17 +2712,6 @@ HTML;
             echo "<tr class='tab_bg_1'><td colspan='2'></td></tr>";
         }
 
-        $surnamerand = mt_rand();
-        echo "<tr class='tab_bg_1'><td><label for='textfield_realname$surnamerand'>" . __('Surname') . "</label></td><td>";
-        echo Html::input(
-            'realname',
-            [
-                'value' => $this->fields['realname'],
-                'id'    => "textfield_realname$surnamerand",
-            ]
-        );
-        echo "</td></tr>";
-
         $firstnamerand = mt_rand();
         echo "<tr class='tab_bg_1'><td><label for='textfield_firstname$firstnamerand'>" . __('First name') . "</label></td><td>";
         echo Html::input(
@@ -2730,6 +2719,17 @@ HTML;
             [
                 'value' => $this->fields['firstname'],
                 'id'    => "textfield_firstname$firstnamerand",
+            ]
+        );
+        echo "</td></tr>";
+
+        $surnamerand = mt_rand();
+        echo "<tr class='tab_bg_1'><td><label for='textfield_realname$surnamerand'>" . __('Surname') . "</label></td><td>";
+        echo Html::input(
+            'realname',
+            [
+                'value' => $this->fields['realname'],
+                'id'    => "textfield_realname$surnamerand",
             ]
         );
         echo "</td></tr>";
@@ -3127,22 +3127,21 @@ HTML;
             echo "<input type='hidden' name='name' value='" . $this->fields["name"] . "'>";
             echo "<input type='hidden' name='id' value='" . $this->fields["id"] . "'>";
             echo "</th></tr>";
-
-            $surnamerand = mt_rand();
-            echo "<tr class='tab_bg_1'><td><label for='textfield_realname$surnamerand'>" . __('Surname') . "</label></td><td>";
-
+            
+            $firstnamerand = mt_rand();
+            echo "<tr class='tab_bg_1'><td><label for='textfield_firstname$firstnamerand'>" . __('First name') . "</label></td><td>";
             if (
                 $extauth
-                && isset($authtype['realname_field'])
-                && !empty($authtype['realname_field'])
+                && isset($authtype['firstname_field'])
+                && !empty($authtype['firstname_field'])
             ) {
-                echo $this->fields["realname"];
+                echo $this->fields["firstname"];
             } else {
                 echo Html::input(
-                    'realname',
+                    'firstname',
                     [
-                        'value' => $this->fields['realname'],
-                        'id'    => "textfield_realname$surnamerand",
+                        'value' => $this->fields['firstname'],
+                        'id'    => "textfield_firstname$firstnamerand",
                     ]
                 );
             }
@@ -3163,23 +3162,25 @@ HTML;
                 echo "</tr>";
             }
 
-            $firstnamerand = mt_rand();
-            echo "<tr class='tab_bg_1'><td><label for='textfield_firstname$firstnamerand'>" . __('First name') . "</label></td><td>";
+            $surnamerand = mt_rand();
+            echo "<tr class='tab_bg_1'><td><label for='textfield_realname$surnamerand'>" . __('Surname') . "</label></td><td>";
+
             if (
                 $extauth
-                && isset($authtype['firstname_field'])
-                && !empty($authtype['firstname_field'])
+                && isset($authtype['realname_field'])
+                && !empty($authtype['realname_field'])
             ) {
-                echo $this->fields["firstname"];
+                echo $this->fields["realname"];
             } else {
                 echo Html::input(
-                    'firstname',
+                    'realname',
                     [
-                        'value' => $this->fields['firstname'],
-                        'id'    => "textfield_firstname$firstnamerand",
+                        'value' => $this->fields['realname'],
+                        'id'    => "textfield_realname$surnamerand",
                     ]
                 );
             }
+
             echo "</td></tr>";
 
             if (
