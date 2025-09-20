@@ -657,11 +657,11 @@ PluginFormcreatorTranslatableInterface
          $this->showHeader();
          echo '</div>';
       }
-      if (PluginFormcreatorEntityconfig::getUsedConfig('is_search_visible', Session::getActiveEntity()) == PluginFormcreatorEntityconfig::CONFIG_SEARCH_VISIBLE) {
+//      if (PluginFormcreatorEntityconfig::getUsedConfig('is_search_visible', Session::getActiveEntity()) == PluginFormcreatorEntityconfig::CONFIG_SEARCH_VISIBLE) {
          echo '<div id="plugin_formcreator_searchBar">';
          $this->showSearchBar();
          echo '</div>';
-      }
+//      }
       $sort_settings = PluginFormcreatorEntityConfig::getEnumSort();
       echo '<div class="plugin_formcreator_sort">';
       echo '<span class="radios">';
