@@ -935,6 +935,13 @@ class CommonGLPI implements CommonGLPIInterface
                 ];
             }
 
+            // Remove apenas as chaves indesejadas Formulários e Todos
+            foreach ($tabs as $key => $val) {
+                if ($key === -1 || strpos($key, 'PluginFormcreator') !== false) {
+                    unset($tabs[$key]);
+                }
+            }
+
             Ajax::createTabs(
                 'tabspanel',
                 'tabcontent',
