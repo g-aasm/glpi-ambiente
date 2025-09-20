@@ -56,13 +56,13 @@
                {% endif %}
             </a>
             <div class="dropdown-menu dropdown-menu-end mt-1 dropdown-menu-arrow animate__animated animate__fadeInRight">
-               <h6 class="dropdown-header">{{ get_item_name(user) }}</h6>
+{#               <h6 class="dropdown-header">{{ get_item_name(user) }}</h6> #}
 
                {% if not anonymous %}
                   {{ include('layout/parts/profile_selector.html.twig') }}
 
                   <div class="dropdown-divider"></div>
-
+{#
                   {% if has_itemtype_right('Config', constant('UPDATE')) %}
                      <a href="{{ path('/ajax/switchdebug.php') }}"
                         class="dropdown-item {% if is_debug_active %}bg-red-lt{% endif %}"
@@ -71,10 +71,11 @@
                         {{ is_debug_active ? __('Debug mode enabled') : __('Debug mode disabled') }}
                      </a>
                   {% endif %}
+#}
                {% endif %}
 
                {# @TODO Saved searches panel #}
-
+{#
                <div class="dropdown-item">
                   <i class="ti fa-fw ti-language"></i>
                   {{ call('User::showSwitchLangForm')|raw }}
@@ -99,7 +100,7 @@
                </a>
 
                <div class="dropdown-divider"></div>
-
+#}
                <a href="{{ path('/front/preference.php') }}" class="dropdown-item" title="{{ __('My settings') }}">
                   <i class="ti fa-fw ti-adjustments-alt"></i>
                   {{ __('My settings') }}
