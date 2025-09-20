@@ -884,7 +884,7 @@ PluginFormcreatorTranslatableInterface
       echo '<label for="plugin_formcreator_search_input">'.__('What are you looking for?', 'formcreator').'</label>';
       echo '</form>';
    }
-
+/*
    protected function showMyLastForms() : void {
       $limit = 5;
       $userId = Session::getLoginUserID();
@@ -986,7 +986,7 @@ PluginFormcreatorTranslatableInterface
       }
       echo '</div>';
    }
-
+*/
    /**
     * Display the Form end-user form to be filled
     *
