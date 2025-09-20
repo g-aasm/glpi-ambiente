@@ -68,10 +68,10 @@ class Central extends CommonGLPI
 
         if ($item->getType() == __CLASS__) {
             $tabs = [
-                1 => __('Personal View'),
-                2 => __('Group View'),
-                3 => __('Global View'),
-                4 => _n('RSS feed', 'RSS feeds', Session::getPluralNumber()),
+              //  1 => __('Personal View'),
+              //  2 => __('Group View'),
+              //  3 => __('Global View'),
+              //  4 => _n('RSS feed', 'RSS feeds', Session::getPluralNumber()),
             ];
 
             $grid = new Glpi\Dashboard\Grid('central');
